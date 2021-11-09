@@ -18,6 +18,11 @@ PASS = os.getenv('EMAIL_PASSWORD')  # your email id's password
 
 
 def compose_mail(content):
+    """
+    Gets the mail content and
+    Adds the mail content to the MIMEMultipart object
+    and returns the MIMEMultipart object - msg
+    """
     print('Composing Email...')
     msg = MIMEMultipart()
     msg['Subject'] = 'Top News Stories HN [Automated Email]' + ' ' + str(now.day) + '-' + str(now.month) + '-' + str(
@@ -29,6 +34,10 @@ def compose_mail(content):
 
 
 def send_mail(content):
+    """
+    Gets the news content and
+    sends it to the receivers using SMTP
+    """
     msg = compose_mail(content)
     print('Initiating Server...')
     server = smtplib.SMTP(SERVER, PORT)

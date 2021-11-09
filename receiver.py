@@ -5,4 +5,7 @@ receiver_list: list[str] = [
 
 
 def get_list():
+    """
+    Returns the receiver list
+    """
     return receiver_list

@@ -3,6 +3,10 @@ import scraper
 
 
 def format_content(news_content):
+    """Gets the news content and
+    Formats the content to improve readability and
+    returns the Formatted Content
+    """
     content = ''
     content += news_content
     content += ('<br>----------------------<br>')
